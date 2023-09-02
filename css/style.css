@@ -1,0 +1,756 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    background-color: #333333;
+}
+
+#burger, [for=burger]{
+    display: none;
+    }
+    
+    @keyframes show {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+.title{
+    text-align: center;
+    font-weight: 300;
+    font-size: 48px;
+    color: white;
+}
+
+.yellow{
+    color: #D1A954;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header-banner{
+    height: 100vh;
+    background: url(../media/imgs/banner/bg.png) no-repeat;
+    background-size: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+nav{
+    display: flex;
+    gap: 60px;
+}
+
+.nav-social{
+    display: none;
+}
+
+.link{
+    color: white;
+    font-weight: 700;
+}
+
+.link-phone{
+    display: none;
+}
+
+.phone{
+    color: white;
+    font-weight: 700;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #D1A954;
+}
+
+.banner{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-text{
+    color: white;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.banner-img img{
+    cursor: pointer;
+}
+
+.banner-text h1{
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.banner-button{
+    margin-top: 20px;
+}
+
+.bbtn{
+    padding: 20px 40px;
+    background-color: #D1A954;
+    color: white;
+    font-weight: 700;
+}
+
+.fixedpanel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 100vh;
+    background-color: #c4c4c416;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 60px;
+}
+
+.fixline{
+    width: 4px;
+    height: 120px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.fixedpanel p{
+    transform: rotate(90deg);
+    color: white;
+    font-weight: 700;
+}
+
+.fixsocial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 40px;
+}
+
+.about{
+    margin-top: 150px;
+}
+
+.about-items{
+    margin-top: 100px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-text{
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-ben{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-weight: 700;
+}
+
+.products{
+    margin-top: 150px
+}
+
+.products-items{
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search{
+    display: none;
+}
+
+
+.im1:hover{
+    background: url(../media/imgs/products/search.png);
+}
+
+.benefits{
+    margin-top: 150px;
+}
+
+.benefits-items{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    background: url(../media/imgs/benefits/bg.png) no-repeat;
+    background-size: 100%;
+    padding: 100px 0px;
+}
+
+.ben-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefits-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+.benefits-item h2{
+    font-weight: 700;
+    color: #D1A954;
+    font-size: 72px;
+}
+
+.benefits-item p{
+    max-width: 540px;
+    font-weight: 700;
+    font-size: 36px;
+    color: white;
+}
+
+.partners{
+    margin-top: 150px;
+}
+
+.partners-items{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+
+.mecenat{
+    margin-top: 150px;
+}
+
+.mecenat-items{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 100px;
+}
+
+.mecenat-contacts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+}
+
+.mc{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-inputs{
+    display: flex;
+    gap: 20px;
+}
+
+.small-inputs{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.small-inputs input{
+    padding: 10px 20px;
+    width: 180px;
+    border: 1px solid #616161;
+    background-color: #4444;
+    outline: none;
+    font-family: 'open sans';
+}
+
+.small-inputs input::placeholder{
+    color: white;
+}
+
+.form-button{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.mbtn{
+    padding: 20px 40px;
+    background-color: #D1A954;
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-family: 'open sans';
+}
+
+.form-button p{
+    color: #616161;
+    max-width: 500px;
+}
+
+textarea{
+    padding: 10px 20px;
+    width: 310px;
+    height: 100px;
+    background-color: #4444;
+    border: 1px solid #616161;
+    outline: none;
+    font-family: 'open sans';
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.line{
+    border: 1px solid #616161;
+}
+
+.footer-items{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    color: #616161;
+}
+
+@media (max-width: 1476px){
+    .fixedpanel{
+        display: none;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1169px){
+    .container{
+        max-width: 690px;
+    }
+
+    .header-banner{
+        height: 1045px;
+        background-size: 200%;
+    }
+
+    .fixedpanel{
+        width: 120px;
+    }
+
+    header{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    nav{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .banner-img{
+        display: none;
+    }
+
+    .about-img{
+        display: none;
+    }
+
+    .about-items{
+        justify-content: space-between;
+    }
+
+    .about-text{
+        width: 380px;
+    }
+
+    .im3{
+        display: none;
+    }
+
+    .products{
+        overflow: hidden;
+    }
+
+    .benefits{
+        background: url(../media/imgs/benefits/bg.png) no-repeat center;
+        background-size: 120%;
+        width: 992px;
+    }
+
+    .benefits-items{
+        background: none;
+    }
+
+    .partners-items{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .mecenat-items{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mecenat-contacts{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .mecenat-form{
+        order: -1;
+    }
+
+}
+
+@media (min-width:768px) and (max-width: 991px){
+    .container{
+        max-width: 690px;
+    }
+
+    [for=burger]{
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 20px;
+        text-align: center;
+    }
+
+    [for=burger]::after{
+        content: '≡';
+        font-size: 38px;
+        color: white;
+        font-weight: 700;
+
+    }
+
+    .nav-social{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+    }
+
+    nav{
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        padding: 20px;
+        top: 20px;
+        width: 30%;
+        left: 40px;
+        background-color: #333333;
+    }
+
+    #burger:checked + label + nav{
+        display: flex;
+        animation: show 1s ease alternate;
+    }  
+
+    #burger:checked + [for=burger]::after{
+        content: 'x';
+        color: white;
+    }
+
+    .header-banner{
+        height: 800px;
+        background-size: 200%;
+    }
+
+    .banner{
+        margin-top: 100px;
+    }
+
+    .fixedpanel{
+        display: none;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+
+    nav{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .banner-img{
+        display: none;
+    }
+
+    .about-img{
+        display: none;
+    }
+
+    .about-items{
+        justify-content: space-between;
+    }
+
+    .about-text{
+        width: 380px;
+    }
+
+    .im3{
+        display: none;
+    }
+
+    .products{
+        overflow: hidden;
+    }
+
+    .benefits{
+        background: url(../media/imgs/benefits/bg.png) no-repeat center;
+        width: 768px;
+        background-size: 120%;
+    }
+
+    .benefits-items{
+        background: none;
+    }
+
+    .partners-items{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .mecenat-items{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mecenat-contacts{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .mecenat-form{
+        order: -1;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px){
+    .container{
+        max-width: 510px;
+    }
+
+    [for=burger]{
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 20px;
+        text-align: center;
+    }
+
+    [for=burger]::after{
+        content: '≡';
+        font-size: 38px;
+        color: white;
+        font-weight: 700;
+
+    }
+
+    .nav-social{
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        align-items: center;
+    }
+
+    nav{
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        padding: 20px;
+        top: 20px;
+        width: 30%;
+        left: 40px;
+        background-color: #333333;
+    }
+
+    #burger:checked + label + nav{
+        display: flex;
+        animation: show 1s ease alternate;
+    }  
+
+    #burger:checked + [for=burger]::after{
+        content: 'x';
+        color: white;
+    }
+
+    .header-banner{
+        height: 800px;
+        background-size: 280%;
+    }
+
+    .banner{
+        margin-top: 100px;
+    }
+
+    .banner-text h1{
+        font-size: 56px;
+    }
+
+    .fixedpanel{
+        display: none;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+
+    nav{
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .banner-img{
+        display: none;
+    }
+
+    .about-img{
+        display: none;
+    }
+
+    .about-text{
+        text-align: center;
+        max-width: 510px;
+    }
+
+    .about-items{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .about-ben h2{
+        text-align: center;
+    }
+
+    .ben-items{
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .ben-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10PX;
+    }
+
+    .about-text{
+        width: 380px;
+    }
+
+    .im2{
+        display: none;
+    }
+    
+    .im3{
+        display: none;
+    }
+
+    .products{
+        overflow: hidden;
+    }
+
+    .products-items{
+        display: flex;
+        justify-content: center;
+    }
+
+    .benefits{
+        background: url(../media/imgs/benefits/bg.png) no-repeat center;
+        background-size: 240%;
+        width: 576px;
+    }
+
+    .benefits-items{
+        background: none;
+        gap: 40px;
+    }
+
+    .partners-items{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .mecenat-items{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .mecenat-contacts{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .mecenat-form{
+        order: -1;
+    }
+
+    .main-inputs{
+        flex-direction: column;
+    }
+
+    .form-button{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .form-button p{
+        order: 2;
+        text-align: center;
+    }
+
+    textarea{
+        width: 510px;
+    }
+
+    .small-inputs{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .small-inputs input{
+        width: 220px;
+    }
+
+    
+}
+
